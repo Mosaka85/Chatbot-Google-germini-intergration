@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import os
 import google.generativeai as genai
 app = Flask(__name__)
-api_key = ""
+api_key = "AIzaSyCBZyG0fVJfmnjOO0pEyrfUbkVDiCvt7gU"
 if not api_key:
     raise ValueError("Missing  environment variable. Set it before running the app.")
 genai.configure(api_key=api_key)
@@ -32,4 +32,4 @@ def chat():
     print(f"Generated bot response: {response}")
     return jsonify({"response": response})
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)

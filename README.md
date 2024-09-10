@@ -2,28 +2,50 @@
 A Flask web application that serves as a chatbot, integrated with Google Gemini AI using API calls to generate intelligent responses.
 
 # Project Overview
-This project demonstrates the integration of Google's Gemini model into a Flask-based chatbot. It showcases how to leverage a powerful AI system to interact with users, respond to queries, and engage in meaningful conversation via a web-based interface.
+This project demonstrates the integration of Google's Gemini model into a Flask-based chatbot. 
+
+It showcases how to leverage a powerful AI system to interact with users, respond to queries, and engage in meaningful conversation via a web-based interface.
 
 # Key Features
-Flask Framework: This project uses Flask, a lightweight and flexible web framework, to handle HTTP requests and serve dynamic content.
+
+## Flask Framework:
+
+This project uses Flask, a lightweight and flexible web framework, to handle HTTP requests and serve dynamic content.
 Generative AI Integration: Google's Gemini-Pro model is integrated using API calls, allowing the chatbot to generate content based on user prompts.
 Dynamic Chat Interface: A clean and simple web interface allows users to chat with the AI bot in real-time.
-Error Handling: The system includes enhanced error handling for API calls and user input validation.
-File Structure
-app.py: The main application file that contains the Flask routes and logic to connect with the Google Gemini model.
-templates/MosakaChat.html: The HTML template for the chat interface, where users can interact with the chatbot.
-static: Directory containing static files such as JavaScript, CSS, and images used in the web application.
-Code Walkthrough
 
-# Imports
+## Error Handling:
+The system includes enhanced error handling for API calls and user input validation.
+
+## File Structure
+
+### app.py:
+
+The main application file that contains the Flask routes and logic to connect with the Google Gemini model.
+### templates/MosakaChat.html: 
+
+The HTML template for the chat interface, where users can interact with the chatbot.
+static: Directory containing static files such as JavaScript, CSS, and images used in the web application.
+
+
+# Code Walkthrough
+
+### Imports
 The code imports necessary libraries such as:
 
 *Flask* : For building the web application.
+
 *request* : To handle incoming POST requests from users.
+
 *jsonify* : To convert Python dictionaries into JSON format.
-render_template: To render the HTML chat interface.
-google.generativeai: For accessing the Google Gemini model via API calls.
-GenerativeAI Configuration
+
+render_template:
+To render the HTML chat interface.
+
+google.generativeai: 
+For accessing the Google Gemini model via API calls.
+
+###  GenerativeAI Configuration
 The application sets up a connection to the Gemini-Pro model using an API key, which is securely retrieved from environment variables. This API key allows the app to authenticate requests to the Google GenerativeAI service.
 
 Chatbot Response Function

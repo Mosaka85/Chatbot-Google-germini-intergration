@@ -48,40 +48,37 @@ For accessing the Google Gemini model via API calls.
 ###  GenerativeAI Configuration
 The application sets up a connection to the Gemini-Pro model using an API key, which is securely retrieved from environment variables. This API key allows the app to authenticate requests to the Google GenerativeAI service.
 
-Chatbot Response Function
+### Chatbot Response Function
 This function, chatbot_response(), processes user input by sending the prompt to the Gemini model and returning a response. It also replaces certain keywords like "Gemini" with custom terms such as "MOSAKA Intelligence" and "Google" with "Tshepiso Ndaba" to personalize responses.
 
-Flask Routes
+### Flask Routes
 / (index): Renders the main HTML page (MosakaChat.html), where users can interact with the chatbot.
 /chat: Handles incoming chat requests by receiving user input in JSON format, passing it to the chatbot_response() function, and returning the AI-generated response.
 HTML Chat Interface
 The main interface is designed in MosakaChat.html, providing a simple chatbox for users to input their messages and receive responses from the chatbot.
 
-JavaScript Integration
+### JavaScript Integration
 JavaScript handles the asynchronous communication between the front-end (HTML chat interface) and the back-end Flask server. User messages are sent to the /chat route, and responses are displayed dynamically on the page.
 
-Running the Application
+### Running the Application
 Install dependencies:
 
-bash
-Copy code
-pip install -r requirements.txt
-Set up the Gemini API key:
+- bash
+- Copy code
+- pip install -r requirements.txt
+- Set up the Gemini API key:
 
-bash
-Copy code
-export GEMINI_API_KEY='your-api-key-here'
-Run the Flask application:
+#### bash
+- Copy code
+- export GEMINI_API_KEY='your-api-key-here'
+- Run the Flask application:
 
-bash
-Copy code
-python app.py
-Open your browser and navigate to:
+- bash
+- Copy code
+- python app.py
+- Open your browser and navigate to:
 
-arduino
-Copy code
-http://localhost:5000
-Future Improvements
-Enhanced UI/UX: Improve the chat interface to make it more user-friendly and visually appealing.
-Logging and Analytics: Implement logging for tracking chatbot performance and capturing user insights.
-Natural Language Processing: Further refine the AI model's responses by incorporating additional NLP techniques.
+### arduino
+- Copy code
+- http://localhost:5000
+ 

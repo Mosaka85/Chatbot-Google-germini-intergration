@@ -8,7 +8,7 @@ if not api_key:
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-pro")
 def chatbot_response(prompt):
-    """Generates a response from the Gemini model with enhanced error handling."""
+
     try:
         response = model.generate_content(prompt)
         response_text = response.text.replace("Gemini", "MOSAKA Intelligence")
@@ -19,13 +19,11 @@ def chatbot_response(prompt):
         return "An error occurred. Please try again later."
 @app.route("/")
 def index():
-    """Renders the chat interface template, ensuring it exists."""
     if not os.path.exists("MosakaChat.html"):
         raise FileNotFoundError("Chat interface template (MosakaChat.html) not found. Create it.")
     return render_template("MosakaChat.html")
 @app.route("/chat", methods=["POST"])
 def chat():
-    """Handles chat requests, providing a user-friendly response for missing prompts."""
     user_input = request.json.get("prompt")
     print(f"Received input: {user_input}")
     if not user_input:

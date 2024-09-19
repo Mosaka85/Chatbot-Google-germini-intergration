@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import os
 import google.generativeai as genai
 app = Flask(__name__)
-api_key = "AIzaSyCBZyG0fVJfmnjOO0pEyrfUbkVDiCvt7gU"
+api_key = ""
 if not api_key:
     raise ValueError("Missing  environment variable. Set it before running the app.")
 genai.configure(api_key=api_key)
